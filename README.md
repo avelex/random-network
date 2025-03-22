@@ -24,6 +24,15 @@
 - **Verifiable Results**: Cryptographic proofs ensure integrity of random number generation
 - **Developer-Friendly**: Simple integration for dApps needing secure randomness
 
+
+## How It Works
+
+<div align="center">
+
+![Random Network Flow](./assets/images/flow.svg)
+
+</div>
+
 ## 🔧 Architecture
 
 Random Network consists of several key components working together to provide secure, verifiable randomness:

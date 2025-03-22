@@ -146,3 +146,6 @@ dist
 .env.testnet
 
 .DS_Store
+
+*.d2
+DECK*.md
