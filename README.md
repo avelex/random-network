@@ -25,6 +25,12 @@
 - **Developer-Friendly**: Simple integration for dApps needing secure randomness
 
 
+## ✨ Response Time Benchmark
+
+| Blockchain | Random Network | Chainlink VRF | Supra VRF |
+|--------|---------------|--------------|----------|
+| Arbitrum Sepolia | ~10 seconds | 3-10 minutes | 2-7 minutes |
+
 ## How It Works
 
 <div align="center">
