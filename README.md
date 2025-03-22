@@ -2,6 +2,8 @@
   <img src="./assets/images/random-network.png" alt="Random Network" width="700">
 </div>
 
+---
+
 > A Layer 2 Rollup Solution for Decentralized Verifiable Random Functions
 
 🚀 Random VRF Example App: https://app.random-network.org/
