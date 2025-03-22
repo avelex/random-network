@@ -1,19 +1,5 @@
-<div align="center">
-  <style>
-    @font-face {
-      font-family: 'SoyuzGroteskBold';
-      src: url('./assets/font/SoyuzGroteskBold.otf') format('opentype');
-      font-weight: bold;
-      font-style: normal;
-    }
-    .custom-font {
-      font-family: 'SoyuzGroteskBold', sans-serif;
-      font-size: 64px;
-      letter-spacing: 2px;
-      color: black;
-    }
-  </style>
-  <p class="custom-font">RANDOM NETWORK</p>
+<div align="center" style="text-align: center; padding: 20px">
+  <img src="./assets/images/random-network.png" alt="Random Network" width="700">
 </div>
 
 > A Layer 2 Rollup Solution for Decentralized Verifiable Random Functions
