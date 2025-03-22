@@ -1,0 +1,11 @@
+{
+  "eco": {
+    "enabled": false
+  },
+  "hyperlane7683": {
+    "enabled": false
+  },
+  "randomtestnet": {
+    "enabled": true
+  }
+}
