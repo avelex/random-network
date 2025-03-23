@@ -27,7 +27,8 @@ import {
 
 const allowedAddresses = [
   '0x008635105b348396B6ccD18BB715A9b6Db0E0D12',
-  '0x9bF90104DC52b645038780f5e4410eC036DD273d'
+  '0x9bF90104DC52b645038780f5e4410eC036DD273d',
+  '0xa6334941d20b76af46379606a80F73a9c1406586'
 ];
 
 const allowBlockLists: AllowBlockLists = {
@@ -47,7 +48,7 @@ const allowBlockLists: AllowBlockLists = {
     // Allow specific mailbox addresses as recipients
     {
       senderAddress: allowedAddresses,
-      destinationDomain: ["arbitrumsepolia", "randomtestnet"],
+      destinationDomain: ["arbitrumsepolia", "randomtestnet", "optimismsepolia", "sepolia"],
       recipientAddress: allowedAddresses
     }
   ],

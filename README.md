@@ -27,9 +27,11 @@
 
 ## ✨ Response Time Benchmark
 
-| Blockchain | Random Network | Chainlink VRF | Supra VRF |
-|--------|---------------|--------------|----------|
-| Arbitrum Sepolia | ~10 seconds | 3-10 minutes | 2-7 minutes |
+| Blockchain | Random Network | 
+|--------|---------------|
+| Arbitrum Sepolia | ~10 seconds |
+| Ethereum Sepolia | ~30 seconds |
+| Optimism Sepolia | ~10 seconds |
 
 ## How It Works
 
@@ -180,12 +182,16 @@ contract MyGame is IRandomConsumer {
 
 ## VFR Request
 
-- **Arbitrum Sepolia**: `0x9A0766d9730Ae0F17e81143C8A632b3DCA613CD4`
+- **Arbitrum Sepolia**: `0x008635105b348396B6ccD18BB715A9b6Db0E0D12`
+- **Ethereum Sepolia**: `0xa6334941d20b76af46379606a80F73a9c1406586`
+- **Optimism Sepolia**: `0xa6334941d20b76af46379606a80F73a9c1406586`
 
 ### VRF Verification Library
 
-- **Arbitrum Sepolia**: `0xAB6729F68CECD58D718693d98108AaaE0bf72b2A`
 - **Random Testnet**: `0x90C95CD5980001b55EE0e54845d0daa9dA93d64E`
+- **Arbitrum Sepolia**: `0xAB6729F68CECD58D718693d98108AaaE0bf72b2A`
+- **Ethereum Sepolia**: `0x8368725aA2F7e8651b1CBa63a5d701ab72f5D429`
+- **Optimism Sepolia**: `0x8368725aA2F7e8651b1CBa63a5d701ab72f5D429`
 
 
 ### Hyperlane Deployments

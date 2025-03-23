@@ -30,7 +30,35 @@ const customChainMetadata = {
     protocol: "ethereum",
     rpcUrls: [
       {
-        http: "https://arbitrum-sepolia.infura.io/v3/18dc852a5a164c14bfd0777052c107a0",
+        http: "https://arbitrum-sepolia-rpc.publicnode.com",
+        pagination: {
+          maxBlockRange: 1000,
+        },
+      },
+    ],
+  },
+  sepolia: {
+    name: "sepolia",
+    chainId: 11155111,
+    domainId: 11155111,
+    protocol: "ethereum",
+    rpcUrls: [
+      {
+        http: "https://sepolia-rpc.publicnode.com",
+        pagination: {
+          maxBlockRange: 1000,
+        },
+      },
+    ],
+  },
+  optimismsepolia: {
+    name: "optimismsepolia",
+    chainId: 11155420,
+    domainId: 11155420,
+    protocol: "ethereum",
+    rpcUrls: [
+      {
+        http: "https://optimism-sepolia-rpc.publicnode.com",
         pagination: {
           maxBlockRange: 1000,
         },

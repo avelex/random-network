@@ -14,7 +14,9 @@ import { bytes32ToAddress } from '@hyperlane-xyz/utils';
 // Map of chain IDs to chain names
 const chainIdsToName: Record<string, string> = {
   '421614': 'arbitrumsepolia',
-  '112000': 'randomtestnet'
+  '112000': 'randomtestnet',
+  '11155111': 'sepolia',
+  '11155420': 'optimismsepolia'
 };
 
 export class RandomtestnetListener extends BaseListener<Mailbox, DispatchEvent, ParsedArgs> {

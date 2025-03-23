@@ -8,6 +8,14 @@ import type { RandomtestnetMetadata, IntentData, ParsedArgs } from './types.js';
 import { log } from '../../logger.js';
 import { Mailbox__factory } from "../../typechain/factories/randomtestnet/contracts/Mailbox__factory.js";
 
+// Map of chain IDs to mailbox addresses
+const chainIdsMailbox: Record<number, string> = {
+  421614: '0x598facE78a4302f11E3de0bee1894Da0b2Cb71F8',
+  112000: '0xbE431E0aaEFeC6Ce80071498bCbEd0452011DC41',
+  11155111: '0xfFAEF09B3cd11D9b20d1a19bECca54EEC2884766',
+  11155420: '0x6966b0E55883d49BFB24539356a2f8A673E02039'
+};
+
 export class RandomtestnetFiller extends BaseFiller<RandomtestnetMetadata, ParsedArgs, IntentData> {
   constructor(multiProvider: MultiProvider) {
     super(multiProvider, allowBlockLists, metadata, log);
@@ -41,10 +49,7 @@ export class RandomtestnetFiller extends BaseFiller<RandomtestnetMetadata, Parse
       const targetChainId = parsedArgs.destination;
       const filler = this.multiProvider.getSigner(targetChainId);
 
-      const mailboxAddress = targetChainId == 112000 ? "0xbE431E0aaEFeC6Ce80071498bCbEd0452011DC41" : "0x598facE78a4302f11E3de0bee1894Da0b2Cb71F8";
-      
-      console.log(targetChainId, mailboxAddress);
-      
+      const mailboxAddress = chainIdsMailbox[targetChainId];
       const mailbox = Mailbox__factory.connect(mailboxAddress, filler);
 
       // empty metadata
