@@ -20,6 +20,7 @@ type Config struct {
 	RPC        string        `yaml:"rpc" env:"RPC" env-required:"true"`
 	PrivateKey string        `yaml:"private_key" env:"PRIVATE_KEY" env-required:"true"`
 	Interval   time.Duration `yaml:"interval" env:"INTERVAL" env-default:"10s"`
+	GasLimit   uint64        `yaml:"gas_limit" env:"GAS_LIMIT" env-default:"200000"`
 }
 
 func main() {
@@ -82,7 +83,7 @@ func run(ctx context.Context) error {
 
 			tx := types.NewTx(&types.LegacyTx{
 				Nonce:    nonce,
-				Gas:      60_000,
+				Gas:      cfg.GasLimit,
 				GasPrice: gasPrice,
 				To:       &recipient,
 				Value:    big.NewInt(1),

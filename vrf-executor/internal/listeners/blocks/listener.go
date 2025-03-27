@@ -45,15 +45,23 @@ func (l *listener) Start(ctx context.Context) {
 			}
 
 			if lastBlockNumber == 0 {
-				lastBlockNumber = currentBlockNumber
-			}
+				slog.Debug("New blocks", "from", currentBlockNumber, "to", currentBlockNumber)
 
-			if lastBlockNumber == currentBlockNumber {
+				l.blocks <- Range{
+					From: currentBlockNumber,
+					To:   currentBlockNumber,
+				}
+
+				lastBlockNumber = currentBlockNumber
 				continue
 			}
 
-			from := lastBlockNumber
-			to := currentBlockNumber - 1
+			if lastBlockNumber >= currentBlockNumber {
+				continue
+			}
+
+			from := lastBlockNumber + 1
+			to := currentBlockNumber
 
 			slog.Debug("New blocks", "from", from, "to", to)
 
